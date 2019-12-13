@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		CE17B1E8239F3EDE0078AD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17B1E7239F3EDE0078AD14 /* AppDelegate.swift */; };
-		CE17B1EA239F3EDE0078AD14 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17B1E9239F3EDE0078AD14 /* SceneDelegate.swift */; };
 		CE17B1EC239F3EDE0078AD14 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17B1EB239F3EDE0078AD14 /* ViewController.swift */; };
 		CE17B1EF239F3EDE0078AD14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17B1ED239F3EDE0078AD14 /* Main.storyboard */; };
 		CE17B1F1239F3EE10078AD14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE17B1F0239F3EE10078AD14 /* Assets.xcassets */; };
 		CE17B1F4239F3EE10078AD14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17B1F2239F3EE10078AD14 /* LaunchScreen.storyboard */; };
+		CE17B201239F53820078AD14 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17B200239F53820078AD14 /* LocationManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CE17B1E4239F3EDE0078AD14 /* Demo_BackgroundLocation1210.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_BackgroundLocation1210.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE17B1E7239F3EDE0078AD14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CE17B1E9239F3EDE0078AD14 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE17B1EB239F3EDE0078AD14 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE17B1EE239F3EDE0078AD14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE17B1F0239F3EE10078AD14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE17B1F3239F3EE10078AD14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE17B1F5239F3EE10078AD14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE17B200239F53820078AD14 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,23 @@
 		CE17B1E6239F3EDE0078AD14 /* Demo_BackgroundLocation1210 */ = {
 			isa = PBXGroup;
 			children = (
+				CE17B1FB239F4B960078AD14 /* Location */,
 				CE17B1E7239F3EDE0078AD14 /* AppDelegate.swift */,
-				CE17B1E9239F3EDE0078AD14 /* SceneDelegate.swift */,
+				CE17B1F5239F3EE10078AD14 /* Info.plist */,
 				CE17B1EB239F3EDE0078AD14 /* ViewController.swift */,
 				CE17B1ED239F3EDE0078AD14 /* Main.storyboard */,
 				CE17B1F0239F3EE10078AD14 /* Assets.xcassets */,
 				CE17B1F2239F3EE10078AD14 /* LaunchScreen.storyboard */,
-				CE17B1F5239F3EE10078AD14 /* Info.plist */,
 			);
 			path = Demo_BackgroundLocation1210;
+			sourceTree = "<group>";
+		};
+		CE17B1FB239F4B960078AD14 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				CE17B200239F53820078AD14 /* LocationManager.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +146,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE17B201239F53820078AD14 /* LocationManager.swift in Sources */,
 				CE17B1EC239F3EDE0078AD14 /* ViewController.swift in Sources */,
 				CE17B1E8239F3EDE0078AD14 /* AppDelegate.swift in Sources */,
-				CE17B1EA239F3EDE0078AD14 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PDY29GF949;
 				INFOPLIST_FILE = Demo_BackgroundLocation1210/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -294,7 +303,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.appl.leslie.Demo-BackgroundLocation1210";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,6 +314,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PDY29GF949;
 				INFOPLIST_FILE = Demo_BackgroundLocation1210/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -312,7 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.appl.leslie.Demo-BackgroundLocation1210";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
