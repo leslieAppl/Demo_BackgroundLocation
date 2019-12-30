@@ -18,4 +18,4 @@
 - Ask for User Location Authorization
 - Start Location Updates by startUpdatingLocation() method
 
-- v0.1.0 Manually added Realm Framework
+- v0.2.0 Manually added Realm Framework
