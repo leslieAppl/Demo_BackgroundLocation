@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import MapKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, CLLocationManagerDelegate {
+    var locationManager: LocationManager?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        locationManager = LocationManager()
+        locationManager?.startUpdatingLocation()
 
-
+    }
 }
 

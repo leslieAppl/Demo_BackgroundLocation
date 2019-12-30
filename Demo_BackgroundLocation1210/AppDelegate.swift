@@ -12,7 +12,7 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var locationManager: LocationManager?
+//    var locationManager: LocationManager?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Launched by location")
         }
         
-        locationManager = LocationManager()
-        locationManager?.startUpdatingLocation()
+//        locationManager = LocationManager()
+//        locationManager?.startUpdatingLocation()
         
         return true
     }
