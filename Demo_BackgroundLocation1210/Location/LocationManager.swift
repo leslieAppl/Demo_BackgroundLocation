@@ -15,7 +15,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
     // Location variables
     var startLocation: CLLocation!
     var lastLocation: CLLocation!
-    var runDistance: Double = 0.0
+    var totalDistance: Double = 0.0
     
     // Location Log variables
     var logTimestamp: NSDate?
@@ -62,8 +62,19 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         } else {
             print("Starting To Monitor Location Updates")
             locationManager.requestAlwaysAuthorization()
+            
             locationManager.startUpdatingLocation()
         }
+    }
+    
+    func pauseUpdatingLocation() {
+        startLocation = nil
+        locationManager.stopUpdatingLocation()
+    }
+    
+    func stopUpdatingLocation() {
+        totalDistance = 0.0
+        locationManager.stopUpdatingLocation()
     }
     
     // MARK: - Location Delegate Methods
@@ -84,10 +95,12 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         } else if let location = locations.last {
             eachDistance = lastLocation.distance(from: location) // meters
             print(">> eachDistance: \(eachDistance)")
-            runDistance += lastLocation.distance(from: location)
-            print(">> runDistance: \(runDistance)")
+            totalDistance += lastLocation.distance(from: location)
+            print(">> runDistance: \(totalDistance)")
         }
         lastLocation = locations.last // don't miss storing 'lastLocation'.
+        
+        Log.addLogToRealm(timestamp: self.logTimestamp!, accuracy: self.logAccuracy, speed: self.logSpeed, direction: self.logDirection, eachDistance: self.eachDistance, totalDistance: self.totalDistance)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
