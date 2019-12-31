@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Launched by location")
         }
         
+
 //        locationManager = LocationManager()
 //        locationManager?.startUpdatingLocation()
         

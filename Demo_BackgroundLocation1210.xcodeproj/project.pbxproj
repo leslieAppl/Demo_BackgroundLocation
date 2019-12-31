@@ -18,6 +18,8 @@
 		CEF1BAB523B98D57003E0E4E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF1BAAE23B98D33003E0E4E /* RealmSwift.framework */; };
 		CEF1BAB623B98D57003E0E4E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF1BAAE23B98D33003E0E4E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CEF1BABA23B9BE6E003E0E4E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BAB923B9BE6E003E0E4E /* Log.swift */; };
+		CEF1BAC023BAF291003E0E4E /* LogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BABF23BAF291003E0E4E /* LogCellView.swift */; };
+		CEF1BAC323BAF83E003E0E4E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BAC223BAF83E003E0E4E /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +49,8 @@
 		CEF1BAAE23B98D33003E0E4E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		CEF1BAAF23B98D36003E0E4E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		CEF1BAB923B9BE6E003E0E4E /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		CEF1BABF23BAF291003E0E4E /* LogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellView.swift; sourceTree = "<group>"; };
+		CEF1BAC223BAF83E003E0E4E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +85,13 @@
 		CE17B1E6239F3EDE0078AD14 /* Demo_BackgroundLocation1210 */ = {
 			isa = PBXGroup;
 			children = (
+				CEF1BAC123BAF806003E0E4E /* Extensions */,
+				CEF1BABE23BAF279003E0E4E /* View */,
 				CEF1BAB823B9BE40003E0E4E /* Model */,
 				CE17B1FB239F4B960078AD14 /* Location */,
+				CE17B1EB239F3EDE0078AD14 /* ViewController.swift */,
 				CE17B1E7239F3EDE0078AD14 /* AppDelegate.swift */,
 				CE17B1F5239F3EE10078AD14 /* Info.plist */,
-				CE17B1EB239F3EDE0078AD14 /* ViewController.swift */,
 				CE17B1ED239F3EDE0078AD14 /* Main.storyboard */,
 				CE17B1F0239F3EE10078AD14 /* Assets.xcassets */,
 				CEF1BAAF23B98D36003E0E4E /* Realm.framework */,
@@ -109,6 +115,22 @@
 				CEF1BAB923B9BE6E003E0E4E /* Log.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CEF1BABE23BAF279003E0E4E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1BABF23BAF291003E0E4E /* LogCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEF1BAC123BAF806003E0E4E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1BAC223BAF83E003E0E4E /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +227,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE17B201239F53820078AD14 /* LocationManager.swift in Sources */,
+				CEF1BAC323BAF83E003E0E4E /* Extensions.swift in Sources */,
 				CE17B1EC239F3EDE0078AD14 /* ViewController.swift in Sources */,
 				CEF1BABA23B9BE6E003E0E4E /* Log.swift in Sources */,
 				CE17B1E8239F3EDE0078AD14 /* AppDelegate.swift in Sources */,
+				CEF1BAC023BAF291003E0E4E /* LogCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

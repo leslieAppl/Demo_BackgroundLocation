@@ -19,3 +19,6 @@
 - Start Location Updates by startUpdatingLocation() method
 
 - v0.2.0 Manually added Realm Framework
+- v0.2.1 built realm model
+- v0.2.2 built Log Table View
+
