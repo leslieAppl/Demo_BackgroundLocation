@@ -17,11 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="1iX-Cd-FVD">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="1iX-Cd-FVD">
                                 <rect key="frame" x="20" y="44" width="374" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0DW-eT-QSL">
-                                        <rect key="frame" x="0.0" y="0.0" width="114" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="89" height="30"/>
                                         <state key="normal" title="Start Log">
                                             <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -30,7 +30,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHv-re-ZST">
-                                        <rect key="frame" x="130" y="0.0" width="114" height="30"/>
+                                        <rect key="frame" x="95" y="0.0" width="89" height="30"/>
                                         <state key="normal" title="pause Log">
                                             <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
@@ -39,12 +39,21 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVL-3O-TK5">
-                                        <rect key="frame" x="260" y="0.0" width="114" height="30"/>
+                                        <rect key="frame" x="190" y="0.0" width="89" height="30"/>
                                         <state key="normal" title="Stop Log">
                                             <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
                                             <action selector="stopLogBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xyp-c6-9hq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbC-F6-EeQ">
+                                        <rect key="frame" x="285" y="0.0" width="89" height="30"/>
+                                        <state key="normal" title="Del Log">
+                                            <color key="titleColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="stopLogBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pdr-bL-IRd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -168,7 +177,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="WXF-nE-zVw" secondAttribute="bottom" constant="20" id="39S-0z-02S"/>
+                            <constraint firstAttribute="bottom" secondItem="WXF-nE-zVw" secondAttribute="bottom" constant="20" symbolic="YES" id="39S-0z-02S"/>
                             <constraint firstItem="VvB-AM-gPZ" firstAttribute="top" secondItem="1iX-Cd-FVD" secondAttribute="bottom" constant="2" id="5NH-qu-DCr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VvB-AM-gPZ" secondAttribute="trailing" constant="0.5" id="Ghe-wd-Ku9"/>
                             <constraint firstItem="WXF-nE-zVw" firstAttribute="top" secondItem="VvB-AM-gPZ" secondAttribute="bottom" constant="2" id="PX6-jD-mKX"/>

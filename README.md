@@ -21,4 +21,4 @@
 - v0.2.0 Manually added Realm Framework
 - v0.2.1 built realm model
 - v0.2.2 built Log Table View
-
+- v0.2.3 synchronising Log data with Table View

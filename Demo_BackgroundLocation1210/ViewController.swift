@@ -22,11 +22,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         logTableView.delegate = self
         logTableView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(logDataDidChange(_:)), name: LOG_DATA_DID_CHANGE, object: nil)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        locationManager?.startUpdatingLocation()
-
+        
+    }
+    
+    @objc func logDataDidChange(_ notif: Notification) {
+        logTableView.reloadData()
+        
+        // scroll table view to bottom
+        if Log.getAllLogs()?.count ?? 0 > 0 {
+            let endIndex = IndexPath(row: Log.getAllLogs()!.count - 1, section: 0)
+            self.logTableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
+        }
     }
     
     func startLocationLog() {

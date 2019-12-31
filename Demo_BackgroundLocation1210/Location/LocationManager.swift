@@ -100,10 +100,14 @@ class LocationManager: NSObject, CLLocationManagerDelegate {
         }
         lastLocation = locations.last // don't miss storing 'lastLocation'.
         
-//        Log.addLogToRealm(timestamp: self.logTimestamp!, accuracy: self.logAccuracy, speed: self.logSpeed, direction: self.logDirection, eachDistance: self.eachDistance, totalDistance: self.totalDistance)
+        Log.addLogToRealm(timestamp: self.logTimestamp!, accuracy: self.logAccuracy, speed: self.logSpeed, direction: self.logDirection, eachDistance: self.eachDistance, totalDistance: self.totalDistance)
+        
+        NotificationCenter.default.post(name: LOG_DATA_DID_CHANGE, object: nil)
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Location Error! \(error)")
     }
+    
+    
 }

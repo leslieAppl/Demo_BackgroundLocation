@@ -20,6 +20,7 @@
 		CEF1BABA23B9BE6E003E0E4E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BAB923B9BE6E003E0E4E /* Log.swift */; };
 		CEF1BAC023BAF291003E0E4E /* LogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BABF23BAF291003E0E4E /* LogCellView.swift */; };
 		CEF1BAC323BAF83E003E0E4E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BAC223BAF83E003E0E4E /* Extensions.swift */; };
+		CEF1BAC623BB31D5003E0E4E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BAC523BB31D5003E0E4E /* Constant.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -51,6 +52,7 @@
 		CEF1BAB923B9BE6E003E0E4E /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		CEF1BABF23BAF291003E0E4E /* LogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellView.swift; sourceTree = "<group>"; };
 		CEF1BAC223BAF83E003E0E4E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CEF1BAC523BB31D5003E0E4E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,12 +87,14 @@
 		CE17B1E6239F3EDE0078AD14 /* Demo_BackgroundLocation1210 */ = {
 			isa = PBXGroup;
 			children = (
-				CEF1BAC123BAF806003E0E4E /* Extensions */,
+				CEF1BAC723BB3392003E0E4E /* Controller */,
 				CEF1BABE23BAF279003E0E4E /* View */,
 				CEF1BAB823B9BE40003E0E4E /* Model */,
 				CE17B1FB239F4B960078AD14 /* Location */,
-				CE17B1EB239F3EDE0078AD14 /* ViewController.swift */,
+				CEF1BAC123BAF806003E0E4E /* Extensions */,
+				CEF1BAC423BB31C2003E0E4E /* Utilities */,
 				CE17B1E7239F3EDE0078AD14 /* AppDelegate.swift */,
+				CE17B1EB239F3EDE0078AD14 /* ViewController.swift */,
 				CE17B1F5239F3EE10078AD14 /* Info.plist */,
 				CE17B1ED239F3EDE0078AD14 /* Main.storyboard */,
 				CE17B1F0239F3EE10078AD14 /* Assets.xcassets */,
@@ -131,6 +135,21 @@
 				CEF1BAC223BAF83E003E0E4E /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CEF1BAC423BB31C2003E0E4E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CEF1BAC523BB31D5003E0E4E /* Constant.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CEF1BAC723BB3392003E0E4E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,6 +245,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEF1BAC623BB31D5003E0E4E /* Constant.swift in Sources */,
 				CE17B201239F53820078AD14 /* LocationManager.swift in Sources */,
 				CEF1BAC323BAF83E003E0E4E /* Extensions.swift in Sources */,
 				CE17B1EC239F3EDE0078AD14 /* ViewController.swift in Sources */,
