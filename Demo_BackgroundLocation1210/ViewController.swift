@@ -82,12 +82,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return UISwipeActionsConfiguration(actions: [delete, important])
     }
     
-    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let complete = completionAction(at: indexPath)
-        
-        return UISwipeActionsConfiguration(actions: [complete])
-    }
-    
     func importantAction(at indexPath: IndexPath) -> UIContextualAction {
         let log = Log.getAllLogs()?[indexPath.row]
         
@@ -125,6 +119,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         return action
     }
     
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let complete = completionAction(at: indexPath)
+        
+        return UISwipeActionsConfiguration(actions: [complete])
+    }
+
     func completionAction(at indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .destructive, title: "Complete") { (action, view, completion) in
             Log.removeData(at: indexPath)
@@ -135,23 +135,6 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         action.image = UIImage(systemName: "checkmark")
         action.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
         return action
-    }
-    
-    // MARK: - Table View Data Source
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Log.getAllLogs()?.count ?? 0
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "LogCellView") as? LogCellView {
-            guard let log = Log.getAllLogs()?[indexPath.row] else {
-                return LogCellView()
-            }
-            cell.configureLogCell(log: log)
-            return cell
-        } else {        
-            return LogCellView()
-        }
     }
     
     // select and deselect the high light row
@@ -166,11 +149,29 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         // wrong code description
-//        if cell.backgroundColor == UIColor(named: "Default") {
-//            cell.backgroundColor = UIColor.red
-//        } else {
-//            cell.backgroundColor = UIColor(named: "Default")
-//        }
-
+        //        if cell.backgroundColor == UIColor(named: "Default") {
+        //            cell.backgroundColor = UIColor.red
+        //        } else {
+        //            cell.backgroundColor = UIColor(named: "Default")
+        //        }
     }
+    
+    // MARK: - Table View Data Source
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Log.getAllLogs()?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "LogCellView") as? LogCellView {
+            guard let log = Log.getAllLogs()?[indexPath.row] else {
+                return LogCellView()
+            }
+            cell.configureLogCell(log: log)
+            return cell
+        } else {
+            return LogCellView()
+        }
+    }
+    
+
 }
