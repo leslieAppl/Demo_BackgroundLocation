@@ -30,5 +30,10 @@ class LogCellView: UITableViewCell {
         speedLbl.text = log.speed.setDecimalPlaces(places: 2)
         directionLbl.text = log.direction.setDecimalPlaces(places: 1)
     }
-
+    
+    // if highlight the selected cell
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        self.selectionStyle = .none
+    }
 }

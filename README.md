@@ -22,3 +22,7 @@
 - v0.2.1 built realm model
 - v0.2.2 built Log Table View
 - v0.2.3 synchronising Log data with Table View
+- v0.2.4 added tableview UIContextualAction( ) Delete
+- added UITableView.didSelectRowAt( ) Highlight selected cell
+    - configurated UITableView.selectedStyle to none
+
