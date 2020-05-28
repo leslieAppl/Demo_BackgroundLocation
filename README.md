@@ -25,4 +25,7 @@
 - v0.2.4 added tableview UIContextualAction( ) Delete
 - added UITableView.didSelectRowAt( ) Highlight selected cell
     - configurated UITableView.selectedStyle to none
+- v0.2.5 Clean up
+- v0.3.0 add MapKit - Map View
+
 

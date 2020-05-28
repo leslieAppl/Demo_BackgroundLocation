@@ -9,18 +9,27 @@
 import UIKit
 import MapKit
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate {
     
     var locationManager: LocationManager?
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Map View delegate
+        mapView.delegate = self
+        mapView.showsUserLocation = true
+        mapView.userTrackingMode = .follow
+        
+        // CLLocation delegate
         locationManager = LocationManager()
         Log.printFileURL()
 //        print("here are my Logs: \(Log.getAllLogs())")
         
+        // Table View delegate
         tableView.delegate = self
         tableView.dataSource = self
         

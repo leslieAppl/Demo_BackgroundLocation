@@ -59,7 +59,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WXF-nE-zVw">
-                                <rect key="frame" x="0.0" y="98.5" width="414" height="777.5"/>
+                                <rect key="frame" x="0.0" y="98.5" width="414" height="410.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="LogCellView" rowHeight="60" id="eaQ-aI-REU" customClass="LogCellView" customModule="Demo_BackgroundLocation1210" customModuleProvider="target">
@@ -174,15 +174,24 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="3K2-nA-TGm">
+                                <rect key="frame" x="0.0" y="517" width="414" height="379"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="379" id="7to-O5-Sfh"/>
+                                </constraints>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="WXF-nE-zVw" secondAttribute="bottom" constant="20" symbolic="YES" id="39S-0z-02S"/>
                             <constraint firstItem="VvB-AM-gPZ" firstAttribute="top" secondItem="1iX-Cd-FVD" secondAttribute="bottom" constant="2" id="5NH-qu-DCr"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VvB-AM-gPZ" secondAttribute="trailing" constant="0.5" id="Ghe-wd-Ku9"/>
+                            <constraint firstItem="3K2-nA-TGm" firstAttribute="leading" secondItem="WXF-nE-zVw" secondAttribute="leading" id="MqF-XH-QNO"/>
+                            <constraint firstItem="3K2-nA-TGm" firstAttribute="top" secondItem="WXF-nE-zVw" secondAttribute="bottom" constant="8" symbolic="YES" id="P5S-4P-wVv"/>
                             <constraint firstItem="WXF-nE-zVw" firstAttribute="top" secondItem="VvB-AM-gPZ" secondAttribute="bottom" constant="2" id="PX6-jD-mKX"/>
                             <constraint firstItem="WXF-nE-zVw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QGh-dU-sae"/>
+                            <constraint firstAttribute="bottom" secondItem="3K2-nA-TGm" secondAttribute="bottom" id="V61-yL-scs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1iX-Cd-FVD" secondAttribute="trailing" constant="20" id="WCN-yd-lDW"/>
+                            <constraint firstItem="3K2-nA-TGm" firstAttribute="trailing" secondItem="WXF-nE-zVw" secondAttribute="trailing" id="fCD-Y9-bdu"/>
                             <constraint firstItem="1iX-Cd-FVD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="hKe-xN-CO2"/>
                             <constraint firstItem="WXF-nE-zVw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qs6-Q8-GTS"/>
                             <constraint firstItem="1iX-Cd-FVD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tGU-TY-FTu"/>
@@ -190,13 +199,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="glw-HW-HXG"/>
                     <connections>
+                        <outlet property="mapView" destination="3K2-nA-TGm" id="vQ1-O1-pG7"/>
                         <outlet property="tableView" destination="WXF-nE-zVw" id="KFI-TL-B37"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="97.767857142857139"/>
+            <point key="canvasLocation" x="408.69565217391306" y="-137.27678571428569"/>
         </scene>
     </scenes>
 </document>

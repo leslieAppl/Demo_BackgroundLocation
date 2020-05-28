@@ -13,30 +13,12 @@
 		CE17B1F1239F3EE10078AD14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE17B1F0239F3EE10078AD14 /* Assets.xcassets */; };
 		CE17B1F4239F3EE10078AD14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE17B1F2239F3EE10078AD14 /* LaunchScreen.storyboard */; };
 		CE17B201239F53820078AD14 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE17B200239F53820078AD14 /* LocationManager.swift */; };
-		CEF1BAB223B98D55003E0E4E /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF1BAAF23B98D36003E0E4E /* Realm.framework */; };
-		CEF1BAB323B98D55003E0E4E /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF1BAAF23B98D36003E0E4E /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		CEF1BAB523B98D57003E0E4E /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEF1BAAE23B98D33003E0E4E /* RealmSwift.framework */; };
-		CEF1BAB623B98D57003E0E4E /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CEF1BAAE23B98D33003E0E4E /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CEE9D28023C97E440050E7CE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE9D27F23C97E440050E7CE /* MapKit.framework */; };
 		CEF1BABA23B9BE6E003E0E4E /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BAB923B9BE6E003E0E4E /* Log.swift */; };
 		CEF1BAC023BAF291003E0E4E /* LogCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BABF23BAF291003E0E4E /* LogCellView.swift */; };
 		CEF1BAC323BAF83E003E0E4E /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BAC223BAF83E003E0E4E /* Extensions.swift */; };
 		CEF1BAC623BB31D5003E0E4E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF1BAC523BB31D5003E0E4E /* Constant.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CEF1BAB423B98D55003E0E4E /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CEF1BAB623B98D57003E0E4E /* RealmSwift.framework in Embed Frameworks */,
-				CEF1BAB323B98D55003E0E4E /* Realm.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CE17B1E4239F3EDE0078AD14 /* Demo_BackgroundLocation1210.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo_BackgroundLocation1210.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,8 +29,7 @@
 		CE17B1F3239F3EE10078AD14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE17B1F5239F3EE10078AD14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE17B200239F53820078AD14 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
-		CEF1BAAE23B98D33003E0E4E /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
-		CEF1BAAF23B98D36003E0E4E /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		CEE9D27F23C97E440050E7CE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CEF1BAB923B9BE6E003E0E4E /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		CEF1BABF23BAF291003E0E4E /* LogCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCellView.swift; sourceTree = "<group>"; };
 		CEF1BAC223BAF83E003E0E4E /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -60,8 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEF1BAB523B98D57003E0E4E /* RealmSwift.framework in Frameworks */,
-				CEF1BAB223B98D55003E0E4E /* Realm.framework in Frameworks */,
+				CEE9D28023C97E440050E7CE /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +53,7 @@
 			children = (
 				CE17B1E6239F3EDE0078AD14 /* Demo_BackgroundLocation1210 */,
 				CE17B1E5239F3EDE0078AD14 /* Products */,
+				CEE9D27E23C97E440050E7CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,8 +79,6 @@
 				CE17B1F5239F3EE10078AD14 /* Info.plist */,
 				CE17B1ED239F3EDE0078AD14 /* Main.storyboard */,
 				CE17B1F0239F3EE10078AD14 /* Assets.xcassets */,
-				CEF1BAAF23B98D36003E0E4E /* Realm.framework */,
-				CEF1BAAE23B98D33003E0E4E /* RealmSwift.framework */,
 				CE17B1F2239F3EE10078AD14 /* LaunchScreen.storyboard */,
 			);
 			path = Demo_BackgroundLocation1210;
@@ -111,6 +90,14 @@
 				CE17B200239F53820078AD14 /* LocationManager.swift */,
 			);
 			path = Location;
+			sourceTree = "<group>";
+		};
+		CEE9D27E23C97E440050E7CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEE9D27F23C97E440050E7CE /* MapKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CEF1BAB823B9BE40003E0E4E /* Model */ = {
@@ -162,7 +149,6 @@
 				CE17B1E0239F3EDE0078AD14 /* Sources */,
 				CE17B1E1239F3EDE0078AD14 /* Frameworks */,
 				CE17B1E2239F3EDE0078AD14 /* Resources */,
-				CEF1BAB423B98D55003E0E4E /* Embed Frameworks */,
 				CEF1BAB723B98D6B003E0E4E /* ShellScript */,
 			);
 			buildRules = (
@@ -395,6 +381,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PDY29GF949;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -418,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PDY29GF949;
 				FRAMEWORK_SEARCH_PATHS = (
