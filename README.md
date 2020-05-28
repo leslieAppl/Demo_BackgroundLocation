@@ -3,7 +3,7 @@
 ## Background Location Process
 
 - setting plist file for User Location Authorization
-- Adding Background Capability to Location Updates
+- Adding Background Capability to update location
 
 - Import CoreLocation Framework
 - Init Location Manager's delegate, disiredAccuracy
